@@ -2,17 +2,22 @@
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.2.8.
 
-## Servidor de desenvolvimento
 
-Execute `ng serve` para um servidor de desenvolvimento. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
+![Badge Desenvolvendo](http://img.shields.io/static/v1?label=STATUS&message=%20DESENVOLVENDO&color=GREEN&style=for-the-badge)
 
-![Badge Developing](http://img.shields.io/static/v1?label=STATUS&message=%20DEVELOPING&color=GREEN&style=for-the-badge)
+## :bulb:	Ideia
+Sistema de Loteria no qual o valor do prêmio, é o total do valor das cotas compradas.
+Será possível realizar o cadastro para facilitar o fornecimento dos dados ao finalizar a compra.
 
 # 👨‍💻 Tecnologias e práticas utilizadas
 * `Angular`
 * `Angular Material`
 
-## :hammer: Funcionalidades do projeto
+# 🛠️ Abrir e rodar o projeto
+
+Execute `ng serve` para um servidor de desenvolvimento. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
+
+## :hammer: Funcionalidades
 
 * `Listagem de Rifas`
 <img width="1440" alt="Screenshot 2022-12-15 at 20 01 18" src="https://user-images.githubusercontent.com/54687122/207985416-283ff0e5-a166-4049-9a0b-86bb69308d70.png">
