@@ -1,0 +1,45 @@
+<mat-toolbar color="accent">
+  <span class="title-center">Rifas Ativas</span>
+</mat-toolbar>
+
+<div class="home-content" *ngIf="raffles.length; else semRegistro">
+  <mat-card class="home-card" *ngFor="let raffle of raffles">
+    <mat-card-header>
+      <div mat-card-avatar><mat-icon> attach_money</mat-icon></div>
+      <mat-card-title
+        >Valor Por Cota: {{ raffle.value | currency: "BRL" }}</mat-card-title
+      >
+      <mat-card-subtitle
+        >Quantidade Total de Cotas:
+        {{ raffle.totalQuantity | number }}</mat-card-subtitle
+      >
+      <mat-card-subtitle
+        >Cotas Disponíveis:
+        {{ raffle.availableQuantity | number }}</mat-card-subtitle
+      >
+      <mat-card-subtitle
+        >Criado em
+        {{ raffle.createdOn | date: "dd/MM/yyyy" }}</mat-card-subtitle
+      >
+    </mat-card-header>
+    <!-- <mat-card-content>
+      <p class="quebrar-linha">Nenhuma descrição informada.</p>
+    </mat-card-content> -->
+    <mat-card-actions>
+      <button color="accent" mat-raised-button (click)="openRaffle(raffle.id)">
+        Comprar
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<ng-template #semRegistro>
+  <div class="loading">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,12 @@
+section {
+  display: flex;
+  height: 300px;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+.input-email {
+  width: 100%;
+}

@@ -1,0 +1,47 @@
+<h1 mat-dialog-title>Login</h1>
+<div mat-dialog-content>
+  <mat-form-field class="input" color="accent">
+    <input
+      matInput
+      type="email"
+      placeholder="Email"
+      [formControl]="emailControl"
+    />
+    <mat-error *ngIf="emailControl.invalid">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+  <mat-form-field class="input" color="accent">
+    <input
+      matInput
+      [type]="hide ? 'password' : 'text'"
+      placeholder="Senha"
+      [formControl]="passwordControl"
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      (click)="hide = !hide"
+      [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide"
+    >
+      <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+    </button>
+    <mat-error *ngIf="passwordControl.invalid">Informe a senha</mat-error>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button
+    mat-raised-button
+    cdkFocusInitial
+    color="accent"
+    type="submit"
+    [disabled]="emailControl.invalid && passwordControl.invalid"
+    (click)="loginClick()"
+  >
+    Login
+  </button>
+  <button mat-raised-button (click)="close()">Cancelar</button>
+</div>
+<p class="p-cadastro">
+  Não possui cadastro?
+  <a routerLink="/register" (click)="close()">Clique Aqui</a>
+</p>

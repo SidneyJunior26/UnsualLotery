@@ -1,0 +1,77 @@
+<section>
+  <div class="container" *ngIf="raffles.length; else semRegistro">
+    <mat-list *ngFor="let raffle of raffles">
+      <div class="icon-div">
+        <mat-icon color="accent">attach_money</mat-icon>
+      </div>
+      <mat-list-item
+        ><p matLine><b>Valor</b></p>
+        <p matLine>{{ raffle.value | currency: "BRL" }}</p></mat-list-item
+      >
+      <mat-list-item
+        ><p matLine><b>Quantidade Total de Cotas</b></p>
+        <p matLine>{{ raffle.totalQuantity | number }}</p>
+      </mat-list-item>
+      <mat-list-item
+        ><p matLine><b>Cotas Disponíveis</b></p>
+        <p matLine>{{ raffle.availableQuantity | number }}</p>
+      </mat-list-item>
+      <mat-list-item
+        ><p matLine><b>Valor do Prêmio (Até o momento)</b></p>
+        <p matLine>
+          {{
+            raffle.value * (raffle.totalQuantity - raffle.availableQuantity)
+              | currency: "BRL"
+          }}
+        </p></mat-list-item
+      >
+      <mat-list-item>
+        <p matLine><b>Criado em</b></p>
+        <p matLine>{{ raffle.createdOn | date: "dd MMMM yyyy" }}</p>
+      </mat-list-item>
+    </mat-list>
+    <div class="main-div">
+      <mat-card>
+        <div class="qtde-div">
+          <mat-form-field
+            class="example-full-width"
+            appearance="fill"
+            color="accent"
+          >
+            <mat-label class="qtde-label">Quantidade</mat-label>
+            <input matInput type="number" [formControl]="quantityControl" />
+          </mat-form-field>
+        </div>
+        <button
+          color="accent"
+          mat-raised-button
+          matTooltip="Confirmar"
+          [disabled]="quantityControl.invalid"
+          (click)="confirmUser()"
+        >
+          Realizar Compra
+        </button>
+        <button
+          color="basic"
+          mat-raised-button
+          (click)="cancel()"
+          matTooltip="Voltar"
+        >
+          <mat-icon>keyboard_return</mat-icon>
+          Voltar
+        </button>
+      </mat-card>
+    </div>
+  </div>
+</section>
+
+<ng-template #semRegistro>
+  <div class="loading">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ng-template>

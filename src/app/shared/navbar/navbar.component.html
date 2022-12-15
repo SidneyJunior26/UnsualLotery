@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <span>Unsual Lotery</span>
+  <span class="example-spacer"></span>
+  <div *ngIf="!userIsLoggedIn">
+    <button mat-raised-button (click)="openDialog()">Entrar</button>
+    <button
+      mat-raised-button
+      color="accent"
+      class="btn"
+      (click)="registerUser()"
+    >
+      Cadastrar
+    </button>
+  </div>
+  <div *ngIf="userIsLoggedIn">
+    <span class="user-name">Bem vindo,</span>
+    <button mat-button color="accent" (click)="viewUser()">
+      {{ firstName }}!
+    </button>
+    <button mat-raised-button color="warn" class="btn" (click)="logOut()">
+      Sair
+    </button>
+  </div>
+</mat-toolbar>
+<div class="app-content">
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

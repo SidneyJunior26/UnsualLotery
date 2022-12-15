@@ -1,0 +1,17 @@
+.btn {
+  margin-left: 10px;
+}
+.app-content {
+  background-color: #424242;
+}
+.user-name {
+  font-size: 15px;
+}
+
+.mat-toolbar {
+  box-shadow: -2px 3px 7px 2px #141211;
+}
+
+a {
+  color: rgb(105, 240, 174);
+}

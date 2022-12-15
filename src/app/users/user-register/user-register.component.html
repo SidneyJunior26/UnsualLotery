@@ -1,0 +1,64 @@
+<section>
+  <div mat-dialog-content [formGroup]="userControl">
+    <h1 mat-dialog-title class="title">Cadastro</h1>
+    <mat-form-field class="input" color="accent">
+      <input matInput placeholder="Nome" formControlName="firstName" required />
+      <mat-error *ngIf="userControl.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input" color="accent" ali>
+      <input
+        matInput
+        placeholder="Sobrenome"
+        formControlName="lastName"
+        required
+      />
+      <mat-error *ngIf="userControl.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input input-email" color="accent">
+      <input
+        type="email"
+        matInput
+        placeholder="Email"
+        formControlName="email"
+        required
+      />
+      <mat-error *ngIf="userControl.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input" color="accent">
+      <input
+        matInput
+        type="number"
+        placeholder="Telefone"
+        formControlName="phoneNumber"
+        required
+      />
+      <mat-error *ngIf="userControl.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input" color="accent">
+      <input
+        matInput
+        type="password"
+        placeholder="Senha"
+        formControlName="password"
+        minlength="6"
+        required
+      />
+      <mat-error *ngIf="userControl.invalid"
+        >Informe a senha para salvar</mat-error
+      >
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button
+        mat-raised-button
+        cdkFocusInitial
+        color="accent"
+        type="submit"
+        [disabled]="userControl.invalid"
+        (click)="register()"
+      >
+        <span> Cadastrar </span>
+      </button>
+      <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+  </div>
+</section>

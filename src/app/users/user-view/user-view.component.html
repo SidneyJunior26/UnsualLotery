@@ -1,0 +1,78 @@
+<section>
+  <div
+    mat-dialog-content
+    [formGroup]="userControl"
+    *ngIf="userControl != null; else semRegistro"
+  >
+    <h1 mat-dialog-title class="title">Detalhes</h1>
+    <mat-form-field class="input" color="accent">
+      <input matInput placeholder="Nome" formControlName="firstName" />
+      <mat-error *ngIf="userControl.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input" color="accent" ali>
+      <input matInput placeholder="Sobrenome" formControlName="lastName" />
+      <mat-error *ngIf="userControl.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input input-email" color="accent">
+      <input
+        type="email"
+        matInput
+        placeholder="Email"
+        formControlName="email"
+      />
+      <mat-error *ngIf="userControl.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input" color="accent">
+      <input
+        matInput
+        type="number"
+        placeholder="Telefone"
+        formControlName="phoneNumber"
+      />
+      <mat-error *ngIf="userControl.invalid">Campo obrigatório</mat-error>
+    </mat-form-field>
+    <mat-form-field class="input" color="accent">
+      <input
+        matInput
+        type="password"
+        placeholder="Senha"
+        formControlName="password"
+        minlength="6"
+        required
+      />
+      <mat-error *ngIf="userControl.invalid"
+        >Informe a senha para salvar</mat-error
+      >
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button
+        mat-raised-button
+        cdkFocusInitial
+        color="accent"
+        type="submit"
+        [disabled]="userControl.invalid"
+        (click)="save()"
+      >
+        <span
+          [matTooltip]="
+            userControl.get('password')?.value != '' ? '' : 'Informe a senha'
+          "
+        >
+          Salvar
+        </span>
+      </button>
+      <button mat-raised-button (click)="cancel()">Cancelar</button>
+    </div>
+  </div>
+</section>
+
+<ng-template #semRegistro>
+  <div class="loading">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</ng-template>
