@@ -17,7 +17,6 @@ Execute `ng serve` para um servidor de desenvolvimento. Navegue até `http://loc
 * `Listagem de Rifas`
 <img width="1440" alt="Screenshot 2022-12-15 at 20 01 18" src="https://user-images.githubusercontent.com/54687122/207985416-283ff0e5-a166-4049-9a0b-86bb69308d70.png">
 <img width="1440" alt="Screenshot 2022-12-15 at 20 07 53" src="https://user-images.githubusercontent.com/54687122/207985871-3e36fb3f-2c5d-4a9d-8cb2-9f76ee77709f.png">
-<img width="1440" alt="Screenshot 2022-12-15 at 20 08 52" src="https://user-images.githubusercontent.com/54687122/207986048-59fe75ef-ad99-4de4-bdce-afa941c3b1bf.png">
 
 
 * `Cadastro de Usuário`
@@ -31,5 +30,6 @@ Execute `ng serve` para um servidor de desenvolvimento. Navegue até `http://loc
 * `Detalhes da Rifa`
 <img width="1440" alt="Screenshot 2022-12-15 at 20 09 55" src="https://user-images.githubusercontent.com/54687122/207986136-cfef6cc0-84c9-401b-9951-e0f7b86c3942.png">
 
-# `Confirmação dos Dados (Pré-Finalização)
+
+* `Confirmação dos Dados (Pré-Finalização)
 <img width="1440" alt="Screenshot 2022-12-15 at 20 10 41" src="https://user-images.githubusercontent.com/54687122/207986241-c9623965-3623-424d-aa0d-4742ab9435e6.png">
