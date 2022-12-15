@@ -31,5 +31,5 @@ Execute `ng serve` para um servidor de desenvolvimento. Navegue até `http://loc
 <img width="1440" alt="Screenshot 2022-12-15 at 20 09 55" src="https://user-images.githubusercontent.com/54687122/207986136-cfef6cc0-84c9-401b-9951-e0f7b86c3942.png">
 
 
-* `Confirmação dos Dados (Pré-Finalização)
+* `Confirmação dos Dados (Pré-Finalização)`
 <img width="1440" alt="Screenshot 2022-12-15 at 20 10 41" src="https://user-images.githubusercontent.com/54687122/207986241-c9623965-3623-424d-aa0d-4742ab9435e6.png">
